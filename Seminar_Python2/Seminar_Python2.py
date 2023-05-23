@@ -23,4 +23,25 @@
 # else:
 #     print(f"Число {n} является {i} в ряду Фибоначчи")
 
-       
+# n = int(input("Введите количество дней: "))
+# count = 0
+# max = 0
+# for i in range(1, n+1):
+#     x = int(input(f"Введите среднесуточную температуру для дня {i}: "))
+#     if x > 0:
+#         count +=1
+#     else: count = 0
+#     if  max < count:
+#         max = count
+# print(f"Максимальная длительность оттепели {max} дней.")  
+
+n = int(input("Введите количество арбузов: "))
+max = 0
+min = 1001
+for i in range(n):
+    m = int(input("Введите массу арбуза: "))
+    if max < m:
+        max = m
+    if min > m:
+        min = m
+print(f"Для тещи арбуз массой {min} кг, для себя арбуз {max} кг.")
