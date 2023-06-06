@@ -66,3 +66,24 @@
 # 	Примеры/Тесты:
 #     lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 #     <function_name>(lst1, 2, 10) -> [(1, 9), (3, 3), (7, 4), (9, 10), (10, 2), (13, 8), (14, 10), (19, 7)]
+# I вариант
+# def indexes(input_list: list, min_value: int, max_value: int) -> list:
+#     return [idx for idx in range(len(input_list)) if min_value <= input_list[idx] <= max_value]
+
+
+# lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+
+# print(indexes(lst1, 2, 10))
+# print(indexes(lst1, 2, 9))
+# print(indexes(lst1, 0, 6))
+
+# II вариант
+
+def indexes(input_list: list, min_value: int, max_value: int) -> list:
+    return [(idx, value) for idx, value in enumerate(input_list) if min_value <= input_list[idx] <= max_value]
+
+
+lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+print(indexes(lst1, 2, 10))
+print(indexes(lst1, 2, 9))
+print(indexes(lst1, 0, 6))
